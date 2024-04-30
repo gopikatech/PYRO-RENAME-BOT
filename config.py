@@ -26,20 +26,20 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "22109159")
+    API_HASH  = os.environ.get("API_HASH", "b4624a66067aa5436dabd7be7d097a9b")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6336960668:AAH0Ic8d1YgqcmtVw9QDj3T3f813XReO8Oc") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","pyro-botz")     
-    DB_URL  = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","pyro-bot")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://gopi:gopi@cluster0.86eirwh.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", None))
+    START_PIC   = os.environ.get("START_PIC", "https://telegra.ph/file/afbab23c0a6b9e7690df1.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '1276457970').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "-1001251054975") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1001683171030"))
 
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
